@@ -1,0 +1,461 @@
+---
+import zapallarLogo from '../assets/zapallar-logo.png';
+import mano from '../assets/hand-white.svg';
+import webpayLogo from '../assets/webpay-logo.png'
+import seguroGeneral from '../assets/seguros-generales-boton.png'
+---
+
+
+<div class="landing-container">
+  <div class="content-wrapper">
+    <div class="button-top">
+      <button
+        class="button-top-style"
+        onclick="window.open('https://seguroobligatorio.cl/segurosgenerales', '_blank')"
+        aria-label="Ir a Seguros Generales"
+      >
+        <img src={seguroGeneral.src} alt="Botón Seguros Generales" width={seguroGeneral.width} height={seguroGeneral.height} />
+      </button>
+    </div>
+    <div class="logo-container">
+      <img src={zapallarLogo.src} alt="Zapallar Logo" class="logo" width={zapallarLogo.width} height={zapallarLogo.height} />
+    </div>
+    <div class="button-container">
+      <button class="cta-button" onclick="window.open('https://seguroobligatorio.cl/segurosgenerales', '_blank')">
+        Compra tu seguro aquí
+      </button>
+    </div>
+    <div class="hand-animated-container">
+      <img src={mano.src} alt="Mano animada apuntando al botón" class="hand-animated" width={mano.width} height={mano.height} />
+    </div>
+  </div>
+</div>
+
+<div class="webpay-logo-container">
+  <img src={webpayLogo.src} alt="Webpay Logo" class="webpay-logo" width={webpayLogo.width} height={webpayLogo.height} />
+</div>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="copyright">Ilustre Municipalidad de Zapallar © 2025</div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/municipalidadzapallar/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/MuniZapallar" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/munizapallar/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCGIdiXOpDjeZmBwUSekglfw" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+<style>
+
+:root {
+  --primary-color: #003871;
+  --secondary-color: #FFB300;
+  --white-color: #ffffff;
+  --text-color: var(--primary-color);
+  --footer-text-color: var(--primary-color);
+  --button-text-color: var(--white-color);
+  --icon-hover-bg: rgba(255, 179, 0, 0.9);
+
+  --footer-height-desktop: 4rem; 
+  --footer-height-mobile: 6rem;  
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden; 
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+.landing-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--white-color) 50%, var(--secondary-color) 100%);
+  width: 100%;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: auto; 
+  color: var(--text-color);
+  padding-bottom: calc(var(--footer-height-desktop) + 2rem); 
+}
+
+
+.logo-container {
+  margin-bottom: 3rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+  display: block; 
+  margin: 0 auto; 
+}
+
+.button-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.button-top-style {
+  width: 176px;
+  height: 80px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.button-top-style img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.button-top-style:hover {
+  transform: scale(1.05);
+}
+
+.button-container {
+  animation: slideUp 0.8s ease-out 0.5s both;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.6rem; 
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--button-text-color);
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 56, 113, 0.2);
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background: #004e9c;
+  color: var(--button-text-color);
+  box-shadow: 0 3px 8px rgba(0, 56, 113, 0.3);
+}
+
+.hand-animated-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.hand-animated {
+  width: 56px;
+  height: auto;
+  animation: hand-bounce 1.2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 3px 8px rgba(0, 56, 113, 0.18));
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  display: block;
+  max-width: 100%;
+}
+
+.webpay-logo-container {
+  position: fixed;
+  bottom: calc(var(--footer-height-desktop) + 15px); 
+  right: 20px;
+  z-index: 9;
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, bottom 0.3s ease, left 0.3s ease, right 0.3s ease;
+}
+
+.webpay-logo {
+  width: 150px;
+  height: auto;
+  filter: brightness(1);
+  transition: all 0.3s ease;
+  cursor: default; 
+  display: block;
+}
+
+.webpay-logo-container:hover {
+  transform: translateY(-3px);
+}
+
+.webpay-logo-container:hover .webpay-logo {
+  filter: brightness(1.1) drop-shadow(0 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: transparent; 
+  border-top: 1px solid rgba(0, 56, 113, 0.25);
+  color: var(--footer-text-color);
+  font-size: 0.9rem;
+  animation: fadeIn 1.5s ease-in-out;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px; 
+}
+
+.social-icon {
+  color: var(--footer-text-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; 
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; 
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: -1;
+}
+
+.social-icon:hover {
+  color: var(--footer-text-color); 
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.social-icon:hover::before {
+  transform: scale(1);
+  background-color: var(--icon-hover-bg);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hand-bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); } 
+}
+
+
+
+@media (max-width: 768px) {
+  .content-wrapper {
+      padding-bottom: calc(var(--footer-height-mobile) + 2rem); 
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .button-container {
+     margin-bottom: 1.7rem; 
+  }
+
+  .cta-button {
+    font-size: 1.15rem;
+    padding: 0.9rem 2rem;
+    width: 100%; 
+    max-width: 300px; 
+  }
+
+  .hand-animated {
+    width: 44px;
+  }
+
+  .footer {
+    border-top: none; 
+    padding: 0.75rem 0; 
+    font-size: 0.85rem;
+  }
+
+  .footer-content {
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 0.75rem; 
+    padding: 0 1rem; 
+    text-align: center; 
+  }
+
+  .copyright {
+    order: 2; 
+  }
+
+  .social-icons {
+    order: 1; 
+    justify-content: center;
+    margin: 0;
+    gap: 0.75rem;
+  }
+
+  .social-icon {
+    font-size: 1.1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+ 
+  .webpay-logo-container {
+    bottom: calc(var(--footer-height-mobile) + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto; 
+  }
+
+  .webpay-logo {
+    width: 100px;
+    margin-bottom: 0; 
+  }
+
+  .webpay-logo-container:hover {
+     transform: translateX(-50%) translateY(-3px);
+  }
+
+  .button-top {
+    top: 10px;
+    right: 10px;
+  }
+  .button-top-style {
+    width: 140px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+     --footer-height-mobile: 7rem; 
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+    max-width: 280px;
+  }
+
+  .hand-animated {
+    width: 38px;
+  }
+
+  .button-container {
+     margin-bottom: 1.5rem;
+  }
+
+  .webpay-logo-container {
+     bottom: calc(var(--footer-height-mobile) + 5px);
+  }
+  .webpay-logo {
+    width: 90px;
+  }
+
+  .button-top-style {
+    width: 120px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo {
+    width: 110px;
+  }
+  .cta-button {
+     font-size: 1rem;
+     padding: 0.7rem 1.5rem;
+     max-width: 250px;
+  }
+  .hand-animated {
+     width: 32px;
+  }
+   .button-container {
+     margin-bottom: 1.2rem;
+  }
+  .social-icons {
+    gap: 0.5rem;
+  }
+  .social-icon {
+    font-size: 1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .button-top-style {
+    width: 100px;
+    height: 46px;
+  }
+}
+
+</style>
